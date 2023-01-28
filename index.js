@@ -29,6 +29,7 @@ app.post('/createUser', async (req, res) => {
   res.json(user);
 });
 
+app.use(`/.netlify/functions/api`, router);
 app.listen(process.env.PORT || 3001, () => {
   console.log('SERVER RUNS PERFECTLY!');
 });
